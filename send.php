@@ -8,19 +8,19 @@ $mail = new PHPMailer();
 $mail->isSMTP();
 $mail->SMTPDebug = 4;
 $mail->SMTPAuth = true;
-$mail->SMTPSecure = 'tls';
+$mail->SMTPSecure = 'ssl';
 $mail->CharSet = 'UTF-8';
 $mail->Encoding = 'base64';
 $mail->Host = 'mail.joder.li';
-$mail->Port = '587';
+$mail->Port = '465';
 $mail->isHTML();
 $mail->Username = 'noa@joder.li';
 $mail->Password = 'fD1z82I#sK';
 $mail->SetFrom('noa@joder.li', 'Noa Joder');
-$mail->Subject = "Xelcore Network - Systemnachricht";
+$mail->Subject = "Noa Joder - Road to IP Reputation";
 $mail->Body = $emailText;
 
-$mail->AddAddress("mleuprecht.02@gmail.com");
+$mail->AddAddress("noa@joder.li");
 
 $mail->Send();
 
