@@ -20,7 +20,7 @@ $mail->SetFrom('noa@joder.li', 'Noa Joder');
 $mail->Subject = "Noa Joder - Road to IP Reputation";
 $mail->Body = $emailText;
 
-$mail->AddAddress("noa@joder.li");
+$mail->AddAddress("noa.joder@outlook.com", "joder.noa@protonmail.ch");
 
 $mail->Send();
 
