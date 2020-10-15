@@ -15,7 +15,7 @@ $mail->Host = 'mail.joder.li';
 $mail->Port = '465';
 $mail->isHTML();
 $mail->Username = 'noa@joder.li';
-$mail->Password = 'fD1z82I#sK';
+$mail->Password = 'sax4WdqafDZSXPz9';
 $mail->SetFrom('noa@joder.li', 'Noa Joder');
 $mail->Subject = "Noa Joder - Road to IP Reputation";
 $mail->Body = $emailText;
