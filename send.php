@@ -3,8 +3,6 @@ include("phpmailer/PHPMailerAutoload.php");
 
 //$emailText = $content = file_get_contents('http://loripsum.net/api');
 $emailText = "
-Mit Dual Stack bezeichnet man den Parallelbetrieb von IPv4 und IPv6. Da keine direkte Umstellung von IPv4 auf IPv6 möglich und auch nicht sinnvoll ist, sieht eine Transition Strategy vor, dass alle Netzknoten sowohl IPv4 als auch IPv6 beherrschen. Längerfristig würde man dann auf IPv4 verzichten können. Ausgenommen da, wo bereits heute kein IPv4 mehr möglich ist, weil keine öffentliche IPv4-Adressen mehr verfügbar sind. Hier fährt man bereits IPv6-only.
-
 Dual-Stack
 
 Die Migration zu Dual Stack ist vergleichsweise einfach. Viele Betriebssysteme können mit Dual Stack, also IPv4 und IPv6 gleichzeitig, umgehen. Alle bestehenden Dienste sind weiterhin unter ihrer gewohnten IPv4-Adresse erreichbar. Nach und nach kann man bestehende Dienste per IPv6 erreichbar machen.
@@ -31,7 +29,9 @@ $mail->SetFrom('noa@joder.li', 'Noa Joder');
 $mail->Subject = "Noa Joder - Road to IP Reputation IPv4 Stack";
 $mail->Body = $emailText;
 
-$mail->AddAddress("noa.joder@outlook.com", "joder.noa@protonmail.ch");
+$mail->AddAddress("noa.joder@outlook.com");
+$mail->AddAddress("joder.noa@protonmail.ch");
+
 
 $mail->Send();
 
