@@ -32,7 +32,7 @@ $mail->Subject = "Wieso eine gute IP Reputation wichtig ist.";
 $mail->Body = $emailText;
 
 $mail->AddAddress("noa.joder@outlook.com");
-$mail->AddAddress("joder.noa@protonmail.ch");
+//$mail->AddAddress("joder.noa@protonmail.ch");
 
 
 $mail->Send();
