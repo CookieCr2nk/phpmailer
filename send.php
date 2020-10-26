@@ -4,7 +4,7 @@ include("phpmailer/PHPMailerAutoload.php");
 //$content1 = file_get_contents('http://loripsum.net/api');
 $content2 = file_get_contents('https://baconipsum.com/api/?type=meat-and-filler&paras=5&format=text');
 
-$emailText = $content2
+$emailText = $content2;
 
 $mail = new PHPMailer();
 $mail->isSMTP();
