@@ -1,20 +1,10 @@
 <?php
 include("phpmailer/PHPMailerAutoload.php");
 
-//$emailText = $content = file_get_contents('http://loripsum.net/api');
-$emailText = "
-Sehr geehrter Herr Joder
-\r\n
-Das ist eine ausführliche Nachricht die Täglich versand wird, um die Mail Reputation zu steigern. Bitte beachte Stehts, dass hier keine Fluchwörter drin stehen und dass du die Mails regelmässig liest.
-Denn das ist auch wichtig für eine gute Mail reputation.
-\r\n
-Ich könnte hier noch mehr Text hinballern, aber das lasse ich jetzt erstmal.
-\r\n
-See you later aligator
-\r\n
-Noa Joder
-\r\n
-";
+//$content1 = file_get_contents('http://loripsum.net/api');
+$content2 = file_get_contents('https://baconipsum.com/api/?type=meat-and-filler&paras=5&format=text');
+
+$emailText = $content2
 
 $mail = new PHPMailer();
 $mail->isSMTP();
@@ -26,10 +16,10 @@ $mail->CharSet = 'UTF-8';
 $mail->Host = 'mail.joder.li';
 $mail->Port = '587';
 $mail->isHTML();
-$mail->Username = 'noa@joder.li';
-$mail->Password = 'sax4WdqafDZSXPz9';
-$mail->SetFrom('noa@joder.li', 'Noa Joder');
-$mail->Subject = "Wieso eine gute IP Reputation wichtig ist.";
+$mail->Username = 'support@joder.li';
+$mail->Password = 'pYj87T9nWvQotq8y';
+$mail->SetFrom('support@joder.li', 'Support - Joder.li');
+$mail->Subject = "System Notifications";
 $mail->Body = $emailText;
 
 $mail->AddAddress("noa.joder@outlook.com");
