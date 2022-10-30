@@ -21,17 +21,17 @@ $mail->SMTPAuth = true;
 $mail->SMTPSecure = 'tls';
 $mail->CharSet = 'UTF-8';
 //$mail->Encoding = 'base64';
-$mail->Host = 'mail.joder.li';
+$mail->Host = 'mail.your-server.net';
 $mail->Port = '587';
 $mail->isHTML();
-$mail->Username = 'support@joder.li';
+$mail->Username = 'no-reply@your-server.net';
 $mail->Password = 'pYj87T9nWvQotq8y';
-$mail->SetFrom('support@joder.li', 'Support - Joder.li');
-$mail->Subject = "System Notifications";
+$mail->SetFrom('nor-reply', 'noreply Your-Server');
+$mail->Subject = "Notification";
 $mail->Body = $emailText;
 
-$mail->AddAddress("noa.joder@outlook.com");
-//$mail->AddAddress("joder.noa@protonmail.ch");
+$mail->AddAddress("receiver@your-server.net");
+$mail->AddAddress("receiver2@your-server.net");
 
 
 $mail->Send();
